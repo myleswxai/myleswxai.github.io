@@ -65,6 +65,13 @@
       letter-spacing: -0.03em;
       line-height: 1.15;
     }
+    .lede a {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 2px;
+    }
+    .lede a:hover { text-decoration-color: var(--fg); }
     .lede {
       margin: 1rem 0 0;
       max-width: 36rem;
@@ -142,7 +149,7 @@
   </header>
   <main>
     <h1>Apply to get paid for posting videos</h1>
-    <p class="lede">We're paying creators to post video on X. Fill out this form to apply to the Video Kickstart Bonus — earn a bonus for posting your videos, get fast-tracked to Original Content Rewards, and grow your audience.</p>
+    <p class="lede">We're paying creators to post video on X. Fill out this form to apply to the <a href="https://help.x.com/en/using-x/video-kickstart-bonus" target="_blank" rel="noreferrer">Video Kickstart Bonus</a> — earn a bonus for posting your videos, get fast-tracked to Original Content Rewards, and grow your audience.</p>
     <p class="lede">If you're approved, you'll receive an email and a notification in the X app to enroll.</p>
     <p class="lede">Include your handles on other social platforms. Your bonus amount is determined by your total following across platforms.</p>
 
@@ -195,7 +202,7 @@
   <iframe name="gform" title="Google Form" class="hidden"></iframe>
 
   <script>
-    const ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdlioDyB-ejaXDOi3g9PDKwaTI0BLIaeKQg8MI-mXtKGcfGpw/formResponse";
+    const ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeIoZ_juV6UFNk3OUAz9ph5uGC9yoWw2lKd-CLOXzr8rmeY6A/formResponse";
     const form = document.getElementById("form");
     const done = document.getElementById("done");
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
