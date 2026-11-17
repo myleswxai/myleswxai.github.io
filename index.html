@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Kickstart Bonus</title>
+  <meta name="description" content="Apply to the X Video Kickstart Bonus." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Video Kickstart Bonus" />
+  <meta property="og:description" content="Apply to the X Video Kickstart Bonus." />
+  <meta property="og:image" content="og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Video Kickstart Bonus" />
+  <meta name="twitter:description" content="Apply to the X Video Kickstart Bonus." />
+  <meta name="twitter:image" content="og.jpg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000'/%3E%3Cg fill='%23fff' transform='translate(6.2 6.05) scale(0.0412)'%3E%3Cpath d='M285.38 207.711 462.954 1.5H420.874L266.687 180.55 143.538 1.5H1.5L187.726 272.256 1.5 488.5h42.082l162.826-189.083L336.462 488.5H478.5L285.37 207.711h.01ZM227.743 274.641l-18.868-26.961L58.744 33.147h64.635l121.157 173.135 18.869 26.961 157.489 225.049h-64.635L227.743 274.652v-.011Z'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #000;
+      --surface: #16181c;
+      --fg: #e7e9ea;
+      --muted: #71767b;
+      --faint: #536471;
+      --border: #2f3336;
+      --danger: #f4212e;
+      --success: #00ba7c;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    button { cursor: pointer; font-family: inherit; }
+    h1, h2 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+    header {
+      border-bottom: 1px solid var(--border);
+    }
+    .bar {
+      max-width: 48rem;
+      margin: 0 auto;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0 1.25rem;
+    }
+    .bar svg { width: 1.25rem; height: 1.25rem; fill: currentColor; }
+    .bar span { font-size: 0.875rem; font-weight: 600; letter-spacing: -0.02em; }
+    main { max-width: 48rem; margin: 0 auto; padding: 2.5rem 1.25rem 3.5rem; }
+    h1 {
+      margin: 0;
+      max-width: 36rem;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .lede {
+      margin: 1rem 0 0;
+      max-width: 36rem;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    form, .done {
+      margin-top: 2rem;
+      max-width: 36rem;
+      background: var(--surface);
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.25rem;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    @media (min-width: 640px) {
+      form, .done { padding: 1.75rem; }
+    }
+    .field { margin-bottom: 1.25rem; }
+    label {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .req { color: var(--danger); }
+    .opt { font-size: 0.75rem; font-weight: 400; color: var(--faint); }
+    input {
+      width: 100%;
+      height: 3rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--fg);
+      padding: 0 0.875rem;
+      font-size: 1rem;
+      outline: none;
+    }
+    input::placeholder { color: var(--faint); }
+    input:focus {
+      border-color: #1d9bf0;
+      box-shadow: 0 0 0 3px rgba(29,155,240,0.28);
+    }
+    .err { margin: 0.35rem 0 0; font-size: 0.75rem; color: var(--danger); }
+    .hint { margin: 0.35rem 0 0; font-size: 0.75rem; color: var(--muted); }
+    .submit {
+      margin-top: 0.25rem;
+      width: 100%;
+      height: 3rem;
+      border: 0;
+      border-radius: 999px;
+      background: var(--fg);
+      color: var(--bg);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .submit:hover { opacity: 0.9; }
+    .submit:disabled { opacity: 0.7; cursor: wait; }
+    .done { text-align: center; padding: 2.5rem 1.5rem; }
+    .done h2 { margin: 0.75rem 0 0; font-size: 1.25rem; }
+    .check { width: 2.5rem; height: 2.5rem; color: var(--success); }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <svg viewBox="0 0 480 490" aria-hidden="true">
+        <path d="M285.38 207.711 462.954 1.5H420.874L266.687 180.55 143.538 1.5H1.5L187.726 272.256 1.5 488.5h42.082l162.826-189.083L336.462 488.5H478.5L285.37 207.711h.01ZM227.743 274.641l-18.868-26.961L58.744 33.147h64.635l121.157 173.135 18.869 26.961 157.489 225.049h-64.635L227.743 274.652v-.011Z" />
+      </svg>
+      <span>Video Kickstart Bonus</span>
+    </div>
+  </header>
+  <main>
+    <h1>Apply to get paid for posting videos</h1>
+    <p class="lede">We're paying creators to post video on X. Fill out this form to apply to the Video Kickstart Bonus — earn a bonus for posting your videos, get fast-tracked to Original Content Rewards, and grow your audience.</p>
+    <p class="lede">If you're approved, you'll receive an email and a notification in the X app to enroll.</p>
+    <p class="lede">Include your handles on other social platforms. Your bonus amount is determined by your total following across platforms.</p>
+
+    <form id="form" novalidate>
+      <div class="field">
+        <label for="name">Full name <span class="req">*</span></label>
+        <input id="name" name="entry.459159240" type="text" autocomplete="name" required placeholder="Your name" />
+        <p class="err hidden" id="name-err">Enter your full name.</p>
+      </div>
+      <div class="field">
+        <label for="email">Email address <span class="req">*</span></label>
+        <input id="email" name="entry.1712282191" type="email" autocomplete="email" required placeholder="you@example.com" />
+        <p class="err hidden" id="email-err">Enter a valid email.</p>
+      </div>
+      <div class="field">
+        <label for="xHandle">X handle <span class="req">*</span></label>
+        <input id="xHandle" name="entry.1306131438" type="text" autocomplete="username" required placeholder="@yourhandle" />
+        <p class="hint">The account you post video from</p>
+        <p class="err hidden" id="xHandle-err">Enter your X handle.</p>
+      </div>
+      <div class="field">
+        <label for="instagram">Instagram handle <span class="opt">Optional</span></label>
+        <input id="instagram" name="entry.1000761247" type="text" placeholder="@yourhandle" />
+      </div>
+      <div class="field">
+        <label for="tiktok">TikTok handle <span class="opt">Optional</span></label>
+        <input id="tiktok" name="entry.1593330950" type="text" placeholder="@yourhandle" />
+      </div>
+      <div class="field">
+        <label for="youtube">YouTube channel <span class="opt">Optional</span></label>
+        <input id="youtube" name="entry.1871536415" type="text" placeholder="Channel URL or handle" />
+      </div>
+      <div class="field">
+        <label for="other">Other platforms <span class="opt">Optional</span></label>
+        <input id="other" name="entry.1362174714" type="text" placeholder="Platform and handle" />
+      </div>
+      <button class="submit" id="submit" type="submit">Apply</button>
+    </form>
+
+    <div class="done hidden" id="done">
+      <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="m8 12 3 3 5-6"></path>
+      </svg>
+      <h2>You're in</h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">Your application was sent to the X Video Kickstart Bonus form. Watch X for next steps.</p>
+    </div>
+  </main>
+
+  <iframe name="gform" title="Google Form" class="hidden"></iframe>
+
+  <script>
+    const ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdlioDyB-ejaXDOi3g9PDKwaTI0BLIaeKQg8MI-mXtKGcfGpw/formResponse";
+    const form = document.getElementById("form");
+    const done = document.getElementById("done");
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function showErr(id, on) {
+      document.getElementById(id).classList.toggle("hidden", !on);
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const xHandle = document.getElementById("xHandle").value.trim();
+      showErr("name-err", !name);
+      showErr("email-err", !email || !emailRe.test(email));
+      showErr("xHandle-err", !xHandle);
+      if (!name || !email || !emailRe.test(email) || !xHandle) return;
+
+      const body = new URLSearchParams();
+      for (const input of form.querySelectorAll("input")) {
+        const value = input.value.trim();
+        if (value) body.set(input.name, value);
+      }
+      body.set("submit", "Submit");
+
+      document.getElementById("submit").disabled = true;
+      document.getElementById("submit").textContent = "Submitting";
+      try {
+        await fetch(ACTION, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body,
+        });
+        form.classList.add("hidden");
+        done.classList.remove("hidden");
+      } catch {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("submit").textContent = "Apply";
+        alert("Something went wrong. Check your connection and try again.");
+      }
+    });
+  </script>
+</body>
+</html>
